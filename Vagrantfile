@@ -1,8 +1,10 @@
-$database_server_ip = "192.168.50.10"
+$database_server_ip = "192.168.56.10"
 $database_server_path = "/Users/omer/Projects/vagrant-database-server"
 $vagrant_module_path = "/Users/omer/Projects/vagrant-shell-modules"
 
 Vagrant.configure("2") do |config|
+	config.vbguest.auto_update = false
+
 	config.vm.box = "centos_64"
 	config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210.box"
 
